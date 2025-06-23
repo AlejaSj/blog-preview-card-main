@@ -32,7 +32,21 @@ To view the project locally:
 
 ```bash
 git clone git@github.com:AlejaSj/blog-preview-card-main.git
+cd blog-preview-card
 ```
-2. Open the index.html file in your browser.
+2. Install dependencies
+Make sure you have Node.js installed. Then run:
 
-No build steps or frameworks are required. Tailwind is included via CDN.
+```bash
+npm install
+```
+
+3. Build Tailwind CSS
+To generate the final CSS file using Tailwind CLI:
+
+```bash
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
+4. Open the project
+Open ```index.html``` in your browser. Make sure the ```<link>``` points to the compiled CSS file (css/output.css).
+This will watch for changes and rebuild the CSS automatically.
